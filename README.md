@@ -139,7 +139,7 @@ i번째 은닉층을 수식으로 표현하면 이렇다.
 
 순전파의 이동 순서를 보면 이렇다. 
 
-![](<img src="https://latex.codecogs.com/svg.image?X\to&space;hidden_1\to\phi\to&space;hidden_2\to&space;Neuron(X)" title="X\to hidden_1\to\phi\to hidden_2\to Neuron(X)" />)
+<img src="https://latex.codecogs.com/svg.image?X\to&space;hidden_1\to\phi\to&space;hidden_2\to&space;Neuron(X)" title="X\to hidden_1\to\phi\to hidden_2\to Neuron(X)" />
 
 만약 은닉층이 p 개 인 모델을 만든다면
 
