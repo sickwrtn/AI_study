@@ -125,7 +125,9 @@ X를 n x m 행렬로 보고 계산을 한다. 그렇다면 H(X)는 다음과 같
 
 그리고 이것이 바로 진짜 인공신경망이자. 딥러닝이다.
 
-우리는 은닉층이 두개인 모델을 만들어보자.
+은닉층은 입력 및 출력을 결정할수있다.
+
+우리는 n 행렬 은닉층이 두개인 모델을 만들어보자.
 
 수식으로 쓴다면 다음과 같다.
 
@@ -134,6 +136,16 @@ X를 n x m 행렬로 보고 계산을 한다. 그렇다면 H(X)는 다음과 같
 i번째 은닉층을 수식으로 표현하면 이렇다.
 
 <img src="https://latex.codecogs.com/svg.image?&space;hidden_p(X)=\begin{pmatrix}x_1&...&x_n\\\end{pmatrix}\begin{pmatrix}w^p_1_1&\cdots&w^p_n_1\\\vdots&\ddots&\vdots\\w^p_1_m&\cdots&w^p_n_m\\\end{pmatrix}=\begin{pmatrix}\sum_{i=1}^{m}w^p_1_i\cdot&space;x_i&\cdots&\sum_{i=1}^{m}w^p_n_i\cdot&space;x_i\\\end{pmatrix}" title=" hidden_p(X)=\begin{pmatrix}x_1&...&x_n\\\end{pmatrix}\begin{pmatrix}w^p_1_1&\cdots&w^p_n_1\\\vdots&\ddots&\vdots\\w^p_1_m&\cdots&w^p_n_m\\\end{pmatrix}=\begin{pmatrix}\sum_{i=1}^{m}w^p_1_i\cdot x_i&\cdots&\sum_{i=1}^{m}w^p_n_i\cdot x_i\\\end{pmatrix}" />
+
+순전파의 이동 순서를 보면 이렇다. 
+
+![](<img src="https://latex.codecogs.com/svg.image?X\to&space;hidden_1\to\phi\to&space;hidden_2\to&space;Neuron(X)" title="X\to hidden_1\to\phi\to hidden_2\to Neuron(X)" />)
+
+만약 은닉층이 p 개 인 모델을 만든다면
+
+<img src="https://latex.codecogs.com/svg.image?X\to&space;hidden_1\to\phi\to&space;hidden_2\to\phi\to\cdots\to&space;hidden_p\to&space;Neuron(X)" title="X\to hidden_1\to\phi\to hidden_2\to\phi\to\cdots\to hidden_p\to Neuron(X)" />
+
+같은 이동을 한다 볼수있다.
 
 
 
