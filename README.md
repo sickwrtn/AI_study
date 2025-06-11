@@ -131,9 +131,9 @@ X를 n x m 행렬로 보고 계산을 한다. 그렇다면 H(X)는 다음과 같
 
 <img src="https://latex.codecogs.com/svg.image?Neuron(X)=hidden_2\circ\phi\circ&space;hidden_1(X)" title="Neuron(X)=hidden_2\circ\phi\circ hidden_1(X)" />
 
-일단 첫번째 은닉층을 만들어보자
+i번째 은닉층을 수식으로 표현하면 이렇다.
 
-<img src="https://latex.codecogs.com/svg.image?hidden(X)=\phi(\begin{pmatrix}x_1&x_2&...&x_n\\\end{pmatrix}\begin{pmatrix}w_1_1&...&w_n_1\\...&...&...\\w_1_m&...&w_n_m\\\end{pmatrix})=\begin{pmatrix}\phi(\sum_{i=1}^{m}w_1_i)&...&\phi(\sum_{i=1}^{m}w_n_i)\\\end{pmatrix}" title="hidden(X)=\phi(\begin{pmatrix}x_1&x_2&...&x_n\\\end{pmatrix}\begin{pmatrix}w_1_1&...&w_n_1\\...&...&...\\w_1_m&...&w_n_m\\\end{pmatrix})=\begin{pmatrix}\phi(\sum_{i=1}^{m}w_1_i)&...&\phi(\sum_{i=1}^{m}w_n_i)\\\end{pmatrix}" />
+<img src="https://latex.codecogs.com/svg.image?&space;hidden_p(X)=\begin{pmatrix}x_1&...&x_n\\\end{pmatrix}\begin{pmatrix}w^p_1_1&\cdots&w^p_n_1\\\vdots&\ddots&\vdots\\w^p_1_m&\cdots&w^p_n_m\\\end{pmatrix}=\begin{pmatrix}\sum_{i=1}^{m}w^p_1_i\cdot&space;x_i&\cdots&\sum_{i=1}^{m}w^p_n_i\cdot&space;x_i\\\end{pmatrix}" title=" hidden_p(X)=\begin{pmatrix}x_1&...&x_n\\\end{pmatrix}\begin{pmatrix}w^p_1_1&\cdots&w^p_n_1\\\vdots&\ddots&\vdots\\w^p_1_m&\cdots&w^p_n_m\\\end{pmatrix}=\begin{pmatrix}\sum_{i=1}^{m}w^p_1_i\cdot x_i&\cdots&\sum_{i=1}^{m}w^p_n_i\cdot x_i\\\end{pmatrix}" />
 
 
 
