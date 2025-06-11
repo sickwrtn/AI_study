@@ -79,3 +79,56 @@ X를 n x m 행렬로 보고 계산을 한다. 그렇다면 H(X)는 다음과 같
 이걸 보면 알수있듯 X가 n x m 행렬이라면 H(X)는 m 행렬이라는 것이다.
 
 그리고 손실함수와 역전파를 해준다면 가중치 수정이 가능하다.
+
+## 인공신경망과 다층 퍼셉트론
+
+선형회귀는 정확히는 인공신경망은 아니다.
+
+인공신경망은 다층 퍼셉트론으로 이루어져야 하는데 여기서 퍼셉트론이란
+
+선형회귀에 활성화 함수를 더해둔 것이라고 할수있다.
+
+다층 퍼셉트론은 이 퍼셉트론을 여러개 연결시킨것이라 할수있다.
+
+### 활성화 함수
+활성화 함수인 시그모이드 함수는 순전파중 H(X)를 구하는 과정에서 이 H(X)를 0~1까지의 범위로 제한시킨다.
+
+![](https://blog.kakaocdn.net/dn/sib2q/btsDJkfaBMy/pkKQYrLYXHVDODrXvQNqK0/img.png)
+
+수식으로 쓰자면 
+
+<img src="https://latex.codecogs.com/svg.image?H(x)=\phi(WX&plus;b)" title="H(x)=\phi(WX+b)" />
+
+이렇게 쓸수있다. 여기서 phi가 시그모이드 함수이다.
+
+### 왜 활성화 함수를 쓰는가?
+
+만약 모델을 여러개 연결시켜 가중치를 연결시킨다면 문제가 생긴다.
+
+<img src="https://latex.codecogs.com/svg.image?H(H(x))=W(WX)=W^2X" title="H(H(x))=W(WX)=W^2X" />
+
+분명 모델을 두번 사용했지만 한번사용한것과 별다른 차이점을 두지 못하게 되어버린다.
+
+그렇기 때문에 활성화 함수가 필요한것이다.
+
+<img src="https://latex.codecogs.com/svg.image?H(\phi(H(x)))=W(\phi(WX))" title="H(\phi(H(x)))=W(\phi(WX))" />
+
+이렇게 하면 모델을 연결한 효과를 볼수있다.
+
+### 다층 퍼셉트론
+
+다층 퍼셉트론이란? 
+
+![](https://wikidocs.net/images/page/61010/ann.PNG)
+
+우리가 자주 보는 AI 딥러닝 이미지다. 보다 싶이 은닉층(가중치 행렬)이 한개가 아닌 여러개가 서로 연결되어있는 구조를 지닌다.
+
+그리고 이것이 바로 진짜 인공신경망이자. 딥러닝이다.
+
+우리는 은닉층이 두개인 모델을 만들어보자.
+
+<img src="https://latex.codecogs.com/svg.image?&space;Neuron(X)=H(\phi(H(x)))=H(\phi(WX))=\begin{pmatrix}h_1\\h_2\\...\\h_n\end{pmatrix}\phi(\sum_{i=1}^{n}w_ix_i)=\sum_{j=1}^{n}\phi(\sum_{i=1}^{n}w_ix_i)\cdot&space;h_j" title=" Neuron(X)=H(\phi(H(x)))=H(\phi(WX))=\begin{pmatrix}h_1\\h_2\\...\\h_n\end{pmatrix}\phi(\sum_{i=1}^{n}w_ix_i)=\sum_{j=1}^{n}\phi(\sum_{i=1}^{n}w_ix_i)\cdot h_j" />
+
+다음과 같은 신경망을 얻을수있다.
+
+
