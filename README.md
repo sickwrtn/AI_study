@@ -66,3 +66,15 @@ w_1에 대한 수정된 가중치가 필요하다면
 
 로 각 w_n에 대해 가중치 수정을 할수있다.
 
+## 다중회귀
+
+입력값과 출력값이 단순 1~2D 텐서에 머무르지 않고 다차원 텐서를 사용가능하도록 하는것이다.
+
+<img src="https://latex.codecogs.com/svg.image?H(X)=\begin{pmatrix}x_1&x_2_1&...&x_n_1\\x_1_2&...&...&...\\...&...&...&...\\x_1_m&...&...&x_n_m\\\end{pmatrix}\begin{pmatrix}w_1\\w_2\\...\\w_n\end{pmatrix}&plus;\begin{pmatrix}b\\b\\...\\b\end{pmatrix}" title="H(X)=\begin{pmatrix}x_1&x_2_1&...&x_n_1\\x_1_2&...&...&...\\...&...&...&...\\x_1_m&...&...&x_n_m\\\end{pmatrix}\begin{pmatrix}w_1\\w_2\\...\\w_n\end{pmatrix}+\begin{pmatrix}b\\b\\...\\b\end{pmatrix}" />
+
+X를 n x m 행렬로 보고 계산을 한다. 그렇다면 H(X)는 다음과 같이 표현 가능하다.
+
+<img src="https://latex.codecogs.com/svg.image?\begin{pmatrix}x_1&x_2_1&...&x_n_1\\x_1_2&...&...&...\\...&...&...&...\\x_1_m&...&...&x_n_m\\\end{pmatrix}\begin{pmatrix}w_1\\w_2\\...\\w_n\end{pmatrix}&plus;\begin{pmatrix}b\\b\\...\\b\end{pmatrix}=\begin{pmatrix}\sum_{i=1}^{n}w_ix_i_1&plus;b\\\sum_{i=1}^{n}w_ix_i_2&plus;b\\...\\\sum_{i=1}^{n}w_ix_i_m&plus;b\end{pmatrix}" title="\begin{pmatrix}x_1&x_2_1&...&x_n_1\\x_1_2&...&...&...\\...&...&...&...\\x_1_m&...&...&x_n_m\\\end{pmatrix}\begin{pmatrix}w_1\\w_2\\...\\w_n\end{pmatrix}+\begin{pmatrix}b\\b\\...\\b\end{pmatrix}=\begin{pmatrix}\sum_{i=1}^{n}w_ix_i_1+b\\\sum_{i=1}^{n}w_ix_i_2+b\\...\\\sum_{i=1}^{n}w_ix_i_m+b\end{pmatrix}" />
+
+이걸 보면 알수있듯 X가 n x m 행렬이라면 H(X)는 m 행렬이라는 것이다.
+
