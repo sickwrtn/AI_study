@@ -127,8 +127,10 @@ X를 n x m 행렬로 보고 계산을 한다. 그렇다면 H(X)는 다음과 같
 
 우리는 은닉층이 두개인 모델을 만들어보자.
 
-<img src="https://latex.codecogs.com/svg.image?&space;Neuron(X)=H(\phi(H(x)))=H(\phi(WX))=\begin{pmatrix}h_1\\h_2\\...\\h_n\end{pmatrix}\phi(\sum_{i=1}^{n}w_ix_i)=\sum_{j=1}^{n}\phi(\sum_{i=1}^{n}w_ix_i)\cdot&space;h_j" title=" Neuron(X)=H(\phi(H(x)))=H(\phi(WX))=\begin{pmatrix}h_1\\h_2\\...\\h_n\end{pmatrix}\phi(\sum_{i=1}^{n}w_ix_i)=\sum_{j=1}^{n}\phi(\sum_{i=1}^{n}w_ix_i)\cdot h_j" />
+일단 첫번째 은닉층을 만들어보자
 
-다음과 같은 신경망을 얻을수있다.
+<img src="https://latex.codecogs.com/svg.image?hidden(X)=\phi(\begin{pmatrix}x_1&x_2&...&x_n\\\end{pmatrix}\begin{pmatrix}w_1_1&...&w_n_1\\...&...&...\\w_1_m&...&w_n_m\\\end{pmatrix})=\begin{pmatrix}\phi(\sum_{i=1}^{m}w_1_i)&...&\phi(\sum_{i=1}^{m}w_n_i)\\\end{pmatrix}" title="hidden(X)=\phi(\begin{pmatrix}x_1&x_2&...&x_n\\\end{pmatrix}\begin{pmatrix}w_1_1&...&w_n_1\\...&...&...\\w_1_m&...&w_n_m\\\end{pmatrix})=\begin{pmatrix}\phi(\sum_{i=1}^{m}w_1_i)&...&\phi(\sum_{i=1}^{m}w_n_i)\\\end{pmatrix}" />
+
+
 
 
