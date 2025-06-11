@@ -133,7 +133,7 @@ X를 n x m 행렬로 보고 계산을 한다. 그렇다면 H(X)는 다음과 같
 
 <img src="https://latex.codecogs.com/svg.image?Neuron(X)=hidden_2\circ\phi\circ&space;hidden_1(X)" title="Neuron(X)=hidden_2\circ\phi\circ hidden_1(X)" />
 
-i번째 nXm 은닉층을 수식으로 표현하면 이렇다.
+p번째 nXm 은닉층을 수식으로 표현하면 이렇다.
 
 <img src="https://latex.codecogs.com/svg.image?hidden_{n,m}^{p}(X)=\begin{pmatrix}x_{1,1}&\cdots&x_{n,1}\\\vdots&\ddots&\vdots\\x_{1,m}&\cdots&x_{n,m}\end{pmatrix}\begin{pmatrix}w^p_{1,1}&\cdots&w^p_{n,1}\\\vdots&\ddots&\vdots\\w^p_{1,m}&\cdots&w^p_{n,m}\\\end{pmatrix}=\begin{pmatrix}\sum_{i=1}^{m}w^p_{1,i}\cdot&space;x_{i,1}&\cdots&\sum_{i=1}^{m}w^p_{n,i}\cdot&space;x_{i,1}\\\vdots&\ddots&\vdots\\\sum_{i=1}^{1}w^p_{1,i}\cdot&space;x_{i,m}&\cdots&\sum_{i=1}^{1}w^p_{n,i}\cdot&space;x_{i,m}\\\end{pmatrix}" title="hidden_{n,m}^{p}(X)=\begin{pmatrix}x_{1,1}&\cdots&x_{n,1}\\\vdots&\ddots&\vdots\\x_{1,m}&\cdots&x_{n,m}\end{pmatrix}\begin{pmatrix}w^p_{1,1}&\cdots&w^p_{n,1}\\\vdots&\ddots&\vdots\\w^p_{1,m}&\cdots&w^p_{n,m}\\\end{pmatrix}=\begin{pmatrix}\sum_{i=1}^{m}w^p_{1,i}\cdot&space;x_{i,1}&\cdots&\sum_{i=1}^{m}w^p_{n,i}\cdot&space;x_{i,1}\\\vdots&\ddots&\vdots\\\sum_{i=1}^{1}w^p_{1,i}\cdot x_{i,m}&\cdots&\sum_{i=1}^{1}w^p_{n,i}\cdot x_{i,m}\\\end{pmatrix}" />
 
