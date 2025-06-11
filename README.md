@@ -19,4 +19,4 @@ AI는 하나의 함수다. 입력값을 넣으면 출력이 나오는 함수로 
 이 함수로 실수계수 다항식으로 표현가능한 모든 함수를 표현 가능하다.
 그리고 이 식은 다음과 같이 변환 가능하다.
 
-![](https://latex.codecogs.com/svg.image?w_1x_1&plus;w_2x_2&plus;...&plus;w_nx_n&plus;b=\begin{pmatrix}x_1&x_2&...&x_n\\\end{pmatrix}\begin{pmatrix}w_1\\w_2\\...\\w_n\\\end{pmatrix}&plus;\begin{pmatrix}b\\b\\...\\b\end{pmatrix})
+<img src="https://latex.codecogs.com/svg.image?w_1x_1&plus;w_2x_2&plus;...&plus;w_nx_n&plus;b=\begin{pmatrix}x_1&x_2&...&x_n\\\end{pmatrix}\begin{pmatrix}w_1\\w_2\\...\\w_n\\\end{pmatrix}&plus;\begin{pmatrix}b\\b\\...\\b\end{pmatrix}" title="w_1x_1+w_2x_2+...+w_nx_n+b=\begin{pmatrix}x_1&x_2&...&x_n\\\end{pmatrix}\begin{pmatrix}w_1\\w_2\\...\\w_n\\\end{pmatrix}+\begin{pmatrix}b\\b\\...\\b\end{pmatrix}" />
