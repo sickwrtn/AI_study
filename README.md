@@ -60,3 +60,9 @@ AI는 하나의 함수다. 입력값을 넣으면 출력이 나오는 함수로 
 
 여기서 알파가 학습률이다.
 
+w_1에 대한 수정된 가중치가 필요하다면
+
+<img src="https://latex.codecogs.com/svg.image?w_1_&plus;=w_1-\alpha\frac{\partial&space;Loss(W,b)}{\partial&space;w_1}" title="w_1_+=w_1-\alpha\frac{\partial Loss(W,b)}{\partial w_1}" />
+
+로 각 w_n에 대해 가중치 수정을 할수있다.
+
