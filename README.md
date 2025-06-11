@@ -16,7 +16,23 @@ AI는 하나의 함수다. 입력값을 넣으면 출력이 나오는 함수로 
 ![](https://latex.codecogs.com/svg.image?H(X)=w_nx_n&plus;...&plus;w_2x_2&plus;w_1x_1&plus;b)
 
 다음과 같은 다항식은 x_n에 대한 다변수함수로 구성된다.
+
 이 함수로 실수계수 다항식으로 표현가능한 모든 함수를 표현 가능하다.
+
 그리고 이 식은 다음과 같이 변환 가능하다.
 
 <img src="https://latex.codecogs.com/svg.image?w_1x_1&plus;w_2x_2&plus;...&plus;w_nx_n&plus;b=\begin{pmatrix}x_1&x_2&...&x_n\\\end{pmatrix}\begin{pmatrix}w_1\\w_2\\...\\w_n\\\end{pmatrix}&plus;\begin{pmatrix}b\\b\\...\\b\end{pmatrix}" title="w_1x_1+w_2x_2+...+w_nx_n+b=\begin{pmatrix}x_1&x_2&...&x_n\\\end{pmatrix}\begin{pmatrix}w_1\\w_2\\...\\w_n\\\end{pmatrix}+\begin{pmatrix}b\\b\\...\\b\end{pmatrix}" />
+
+그리고 이걸 X,W,b로 묶는다면
+
+<img src="https://latex.codecogs.com/svg.image?H(X)=WX&plus;b" title="H(X)=WX+b" />
+
+이게 바로 AI의 모델이다.
+
+## 순전파
+만약 학습시킬 데이터 T_x,T_y 에 대해 학습한다면 현재 모델에 T_x에 대한 값을 먼저 구해야 한다.
+
+<img src="https://latex.codecogs.com/svg.image?H(T_x)=WT_x&plus;b" title="H(T_x)=WT_x+b" />
+
+<img src="https://latex.codecogs.com/svg.image?H(T_x)=\begin{pmatrix}t_x_1&t_x_2&...&t_x_n\\\end{pmatrix}\begin{pmatrix}w_1\\w_2\\...\\w_n\end{pmatrix}&plus;\begin{pmatrix}b\\b\\...\\b\end{pmatrix}=\sum_{i=1}^{n}w_it_x_i&plus;b" title="H(T_x)=\begin{pmatrix}t_x_1&t_x_2&...&t_x_n\\\end{pmatrix}\begin{pmatrix}w_1\\w_2\\...\\w_n\end{pmatrix}+\begin{pmatrix}b\\b\\...\\b\end{pmatrix}=\sum_{i=1}^{n}w_it_x_i+b" />
+
